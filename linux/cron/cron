@@ -1,1 +1,4 @@
+SHELL=/bin/bash
 
+00 00 * * * . ./log.sh
+10 10 * * * . ./weather.sh
