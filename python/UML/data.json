@@ -1,0 +1,243 @@
+{
+    "customer": {
+        "1": {
+            "name": "Nataliia Pysanka",
+            "adress": "Kyiv",
+            "phone": "044 55 23 123",
+            "birth": "27/08/1986",
+            "discount": 10
+        },
+        "2": {
+            "name": "Maksym",
+            "adress": "Kharkiv",
+            "phone": "555 555 55",
+            "birth": "30/10/2000",
+            "discount": 0
+        },
+        "3": {
+            "name": "Sara",
+            "adress": "Lviv",
+            "phone": "380 122 87 87",
+            "birth": "",
+            "discount": 0
+        }
+    },
+    "chef": {
+        "1": {
+            "restaurant": "1",
+            "name": "Agata",
+            "adress": "Kyiv",
+            "phone": "877555333",
+            "birth": "30/10/1989",
+            "position": "chef",
+            "salary": 40000
+        },
+        "2": {
+            "name": "Ivan",
+            "restaurant": "2",
+            "adress": "Kyiv",
+            "phone": "333222111",
+            "birth": "25/12/1990",
+            "position": "chef",
+            "salary": 38000
+        },
+        "3": {
+            "name": "Vasyl",
+            "restaurant": "3",
+            "adress": "Kyiv",
+            "phone": "111222333",
+            "birth": "3/08/1986",
+            "position": "chef",
+            "salary": 42000
+        }
+    },
+    "waiter": {
+        "1": {
+            "restaurant": "1",
+            "name": "Olga",
+            "adress": "Kyiv",
+            "phone": "53534546",
+            "birth": "30/10/2000",
+            "position": "waiter",
+            "salary": 16000
+        },
+        "2": {
+            "name": "Ivan",
+            "restaurant": "2",
+            "adress": "Kyiv",
+            "phone": "345456576",
+            "birth": "25/12/1999",
+            "position": "waiter",
+            "salary": 15000
+        },
+        "3": {
+            "name": "Alex",
+            "restaurant": "3",
+            "adress": "Kyiv",
+            "phone": "324534546",
+            "birth": "3/08/2002",
+            "position": "waiter",
+            "salary": 12000
+        }
+    },
+    "restaurant": {
+        "1": {
+            "name": "Kyiv one",
+            "adress": "Khreshchatyk 1",
+            "opened": "True"
+        },
+        "2": {
+            "name": "Lviv two",
+            "adress": "Rynok 1",
+            "opened": "False"
+        },
+        "3": {
+            "name": "Kharkiv three",
+            "adress": "Sumska 1",
+            "opened": "True"
+        }
+    },
+    "product": {
+        "1": {
+            "provider_id": "1",
+            "name": "Potato",
+            "count": "100",
+            "date_delivery": "30/03/2022",
+            "date_expiration": ""
+        },
+        "2": {
+            "provider_id": "2",
+            "name": "Cheese dor-blu",
+            "count": "10",
+            "date_delivery": "01/04/2022",
+            "date_expiration": ""
+        },
+        "3": {
+            "provider_id": "1",
+            "name": "Fish dorado",
+            "count": "20",
+            "date_delivery": "21/04/2022",
+            "date_expiration": "23/04/2022"
+        },
+        "4": {
+            "provider_id": "2",
+            "name": "tomato",
+            "count": "200",
+            "date_delivery": "21/04/2022",
+            "date_expiration": "23/04/2022"
+        },
+        "5": {
+            "provider_id": "2",
+            "name": "egg",
+            "count": "300",
+            "date_delivery": "21/04/2022",
+            "date_expiration": "23/04/2022"
+        },
+        "6": {
+            "provider_id": "1",
+            "name": "feta",
+            "count": "20",
+            "date_delivery": "21/04/2022",
+            "date_expiration": "23/04/2022"
+        },
+        "7": {
+            "provider_id": "1",
+            "name": "oil",
+            "count": "20",
+            "date_delivery": "21/04/2022",
+            "date_expiration": "23/04/2022"
+        },
+        "8": {
+            "provider_id": "1",
+            "name": "orange",
+            "count": "200",
+            "date_delivery": "21/04/2022",
+            "date_expiration": "23/04/2022"
+        }
+    },
+    "dish": {
+        "1": {
+            "name": "Fried potato with fish",
+            "ingredients": {
+                "potato": "200",
+                "fish": "100"
+            },
+            "weight": "300",
+            "cost": "55"
+        },
+        "2": {
+            "name": "Fish with cheese",
+            "ingredients": {
+                "fish": "100",
+                "cheese": "50"
+            },
+            "weight": "150",
+            "cost": "45"
+        },
+        "3": {
+            "name": "Beer",
+            "ingredients": {
+                "beer": "200"
+            },
+            "weight": "400",
+            "cost": "35"
+        },
+        "4": {
+            "name": "Salad",
+            "ingredients": {
+                "tomato": "100",
+                "feta": "50",
+                "oil": "10",
+                "egg": "120"
+            },
+            "weight": "280",
+            "cost": "62"
+        },
+        "5": {
+            "name": "Fresh juice",
+            "ingredients": {
+                "orange": "400"
+            },
+            "weight": "250",
+            "cost": "26"
+        }
+    },
+    "menu": {
+        "1": {
+            "name": "Menu for beer",
+            "date": "24/04/2022",
+            "dishes": {"Beer": "35", "Fried potato with fish": "55"},
+            "cost": "55"
+        },
+        "2": {
+            "name": "Spring menu",
+            "date": "24/04/2022",
+            "dishes": {"Salad": "62", "Fresh juice": "26"},
+            "cost": "55"
+        }
+    },
+    "provider": {
+    "1": {
+        "name": "Silpo",
+        "adress": "Kyiv Poltavska str.",
+        "contacts": "044564332"
+    },
+    "2": {
+        "name": "GreenFarm",
+        "adress": "Poltava",
+        "contacts": "066535458"
+    }
+    },
+    "position": {
+        "1": {
+            "name": "Waiter",
+            "duties": ["Greet guests", "Take order", "Close order",
+                "Clean from the tables", "Place an order"]
+        },
+        "2": {
+            "name": "Chef",
+            "duties": ["Make order", "Transfer order",
+                "Clean the kitchen", "Order products", "Create menu"]
+        }
+    }
+}
