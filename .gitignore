@@ -37,3 +37,6 @@ $RECYCLE.BIN/
 # PyCharm
 .idea
 
+# pytest
+pytest-env
+.pytest_cache
