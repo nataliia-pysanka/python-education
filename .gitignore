@@ -43,3 +43,4 @@ pytest-env
 
 # folders
 /database/.db/
+/data_engineering/data/
