@@ -1,0 +1,54 @@
+version: "3"
+services:
+
+    db:
+        restart: always
+        container_name: db-${APP_NAME}
+        hostname: db-${APP_NAME}
+        ports:
+            - "${DB_PORT}:5432"
+        image: postgres:14.3
+        env_file:
+            - .env
+        environment:
+            POSTGRES_USER: ${POSTGRES_USER}
+            POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+            PGDATA: /var/lib/postgresql/data
+            POSTGRES_DB: ${POSTGRES_DB}
+        volumes:
+            - db-data:/var/lib/postgresql/data
+
+    s3:
+        image: minio/minio
+        container_name: s3-${APP_NAME}
+        hostname: s3-${APP_NAME}
+        env_file:
+            - .env
+        ports:
+            - "${S3_PORT}:9000"
+            - "9001:9001"
+        volumes:
+            - ./data:/data
+        environment:
+            MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+            MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
+        command: minio server /data --console-address ":9001"
+
+    transfer_app:
+        env_file:
+            - .env
+        container_name: ${APP_NAME}
+        hostname: ${APP_NAME}
+        build: .
+        ports:
+            - "80:80"
+        volumes:
+            - .:/code
+        depends_on:
+            - db
+        command: python main.py
+
+volumes:
+    s3-data:
+    db-data:
+    transfer_app-data:
